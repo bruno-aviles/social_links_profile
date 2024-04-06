@@ -1,0 +1,95 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@font-face {
+    font-family: "Inter";
+    src: url(../assets/fonts/static/Inter-Regular.ttf);
+}
+*{
+    box-sizing: border-box;
+}
+:root{
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    /* PRIMARY COLORS */
+    --color-main-01: hsl(75, 94%, 57%); /*Green*/
+    /* NEUTRAL COLORS */
+    --color-white: hsl(0, 0%, 100%); /*White*/
+    --color-grey-light: hsl(0, 0%, 20%); /*Grey*/
+    --color-grey-dark: hsl(0, 0%, 12%); /*Dark Grey*/
+    --color-black: hsl(0, 0%, 8%); /*Off Black*/
+    /* TYPOGRAPHY */
+    --fw-light: 400;
+    --fw-normal: 600;
+    --fw-bold: 800;
+}
+/* COMPONENTS */
+.profile__link{
+    background-color: var(--color-grey-light);
+    text-align: center;
+    font-size: 16px;
+    font-weight: var(--fw-normal);
+    padding: 16px 0;
+    margin: 0 0 16px 0;
+    border-radius: 6px;
+}
+.profile__link:last-child{
+    margin-bottom: 0;
+}
+
+body{
+    background-color: var(--color-black);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile{
+    background-color: var(--color-grey-dark);
+    padding: 24px;
+    max-width: 328px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.profile__image{
+    width: 89px;
+    height: 89px;
+    border-radius: 50%;
+    background-image: url(../assets/images/avatar-jessica.jpeg);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 32px;
+}
+.profile__name{
+    font-size: 22px;
+    font-weight: var(--fw-normal);
+    margin-bottom: 16px;
+}
+.profile__location{
+    font-size: 16px;
+    font-weight: var(--fw-bold);
+    color: var(--color-main-01);
+    margin-bottom: 32px;
+}
+.profile__caption{
+    font-weight: var(--fw-light);
+    margin-bottom: 24px;
+}
+.profile__links{
+    width: 100%;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    margin-top: 16px;
+}
+.attribution a { 
+    color: var(--color-main-01);
+    text-decoration: none;
+}
