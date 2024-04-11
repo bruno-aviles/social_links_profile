@@ -1,15 +1,31 @@
 /* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
 @font-face {
-    font-family: "Inter";
-    src: url(../assets/fonts/static/Inter-Regular.ttf);
+    font-family: "Inter-Regular";
+    font-style: normal;
+    font-display: swap;
+    src: 
+        url(../assets/fonts/static/Inter-Regular.ttf) format(truetype);
 }
+@font-face {
+    font-family: "Inter-SemiBold";
+    font-style: normal;
+    font-display: swap;
+    src: url(../assets/fonts/static/Inter-SemiBold.ttf) format(truetype);
+}
+@font-face {
+    font-family: "Inter-Bold";
+    font-style: normal;
+    font-display: swap;
+    src: 
+        url(../assets/fonts/static/Inter-Bold.ttf) format(truetype);        
+}
+
 *{
     box-sizing: border-box;
 }
+
+/* VARIABLES */
 :root{
-    font-family: "Inter", sans-serif;
     font-size: 14px;
     height: 100%;
     /* PRIMARY COLORS */
@@ -20,24 +36,33 @@
     --color-grey-dark: hsl(0, 0%, 12%); /*Dark Grey*/
     --color-black: hsl(0, 0%, 8%); /*Off Black*/
     /* TYPOGRAPHY */
-    --fw-light: 400;
-    --fw-normal: 600;
-    --fw-bold: 800;
+    --font-regular: "Inter-Regular";
+    --font-semibold: "Inter-SemiBold";
+    --font-bold: "Inter-Bold";
 }
+
 /* COMPONENTS */
 .profile__link{
     background-color: var(--color-grey-light);
     text-align: center;
     font-size: 16px;
-    font-weight: var(--fw-normal);
+    font-family: var(--font-semibold);
     padding: 16px 0;
     margin: 0 0 16px 0;
     border-radius: 6px;
+    transition-timing-function: ease-in;
+    transition-duration: .25s;
 }
 .profile__link:last-child{
     margin-bottom: 0;
 }
+.profile__link:hover{
+    background-color: var(--color-main-01);
+    color: var(--color-black);
+    cursor: pointer;
+}
 
+/* MAIN CONTENT */
 body{
     min-height: 100%;
     background-color: var(--color-black);
@@ -68,20 +93,20 @@ body{
     margin-bottom: 32px;
 }
 .profile__name{
+    font-family: var(--font-semibold);
     font-size: 22px;
-    font-weight: var(--fw-normal);
     margin-bottom: 16px;
     margin-top: 0px;
 }
 .profile__location{
     font-size: 16px;
-    font-weight: var(--fw-bold);
+    font-family: var(--font-bold);
     color: var(--color-main-01);
     margin-bottom: 32px;
     margin-top: 0px;
 }
 .profile__caption{
-    font-weight: var(--fw-light);
+    font-family: var(--font-regular);
     margin-bottom: 24px;
 }
 .profile__links{
@@ -89,6 +114,7 @@ body{
 }
 
 .attribution { 
+    font-family: var(--font-regular);
     font-size: 11px; 
     text-align: center;
     margin-top: 16px;
